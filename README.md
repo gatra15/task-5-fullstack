@@ -15,7 +15,7 @@ Checkout vue-js for Front-End using vue js and blade templating <br />
 base_url = http://127.0.0.1:8000 (from php artisan serve) <br />
 header { <br />
 >>Accept: 'application/json', <br />
->>Authorization: Bearer +token <br />
+Authorization: Bearer +token <br />
 }  <br />
 <br />
 token from login / register user
