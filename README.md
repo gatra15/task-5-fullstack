@@ -17,26 +17,26 @@ header {
 
 token from login / register user
 
-Login User
+# Login User
 "base_url/api/login"
 
-Register
+# Register
 "base_url/api/register"
 
-Get all article
+# Get all article
 "base_url/api/v1/posts"
 
-Get detail article
+# Get detail article
 "base_url/api/v1/posts/{id}"
 
-Create article
+# Create article
 "base_url/api/v1/posts" method POST
 
-Create article
+# Create article
 "base_url/api/v1/posts/{id}" method PUT
 note: in body + key "_method" value PUT  
 
-Delete article (softdelete)
+# Delete article (softdelete)
 "base_url/api/v1/posts/{id}"
 
 Enjoy the Project
