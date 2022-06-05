@@ -1,8 +1,8 @@
 # task-5-fullstack
 Virtual Internship Experience (Investree) - Fullstack - Galih Saputra <br />
-Checkout API-without-auth for API with out auth
-Checkout passport-auth for API using passport authentication
-Checkout vue-js for Front-End using vue js and blade templating
+Checkout API-without-auth for API with out auth <br />
+Checkout passport-auth for API using passport authentication <br />
+Checkout vue-js for Front-End using vue js and blade templating <br />
 
 # How to Use
 1. Set environment
@@ -12,12 +12,12 @@ Checkout vue-js for Front-End using vue js and blade templating
 5. npm run dev
 
 # Using Postman
-base_url = http://127.0.0.1:8000 (from php artisan serve)
-header {
-  Accept: 'application/json',
-  Authorization: Bearer +token
-}
-
+base_url = http://127.0.0.1:8000 (from php artisan serve) <br />
+header { <br />
+  Accept: 'application/json', <br />
+  Authorization: Bearer +token <br />
+}  <br />
+<br />
 token from login / register user
 
 # Login User
