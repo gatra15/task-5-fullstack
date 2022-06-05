@@ -1,5 +1,8 @@
 # task-5-fullstack
 Virtual Internship Experience (Investree) - Fullstack - Galih Saputra
+Checkout API-without-auth for API with out auth
+Checkout passport-auth for API using passport authentication
+Checkout vue-js for Front-End using vue js and blade templating
 
 # How to Use
 1. Set environment
