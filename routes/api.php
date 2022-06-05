@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\CategoriesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,20 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/register', [ApiController::class, 'register']);
+Route::post('/login', [ApiController::class, 'login']);
 
 Route::prefix('v1')->group(function () {
-    Route::get('posts', [ArticleController::class, 'index']);
-    Route::get('posts/{id}', [ArticleController::class, 'show']);
-    Route::post('posts', [ArticleController::class, 'store']);
-    Route::put('posts/{id}', [ArticleController::class, 'update']);
-    Route::delete('posts/{id}', [ArticleController::class, 'destroy']);
+    Route::group(['middleware' => 'auth:api'], function() {
+        Route::get('posts', [ArticleController::class, 'index']);
+        Route::get('posts/{id}', [ArticleController::class, 'show']);
+        Route::post('posts', [ArticleController::class, 'store']);
+        Route::put('posts/{id}', [ArticleController::class, 'update']);
+        Route::delete('posts/{id}', [ArticleController::class, 'destroy']);
 
-    Route::get('categories', [CategoriesController::class, 'index']);
-    Route::get('categories/{id}', [CategoriesController::class, 'show']);
-    Route::post('categories', [CategoriesController::class, 'store']);
-    Route::put('categories/{id}', [CategoriesController::class, 'update']);
-    Route::delete('categories/{id}', [CategoriesController::class, 'destroy']);
+        Route::get('categories', [CategoriesController::class, 'index']);
+        Route::get('categories/{id}', [CategoriesController::class, 'show']);
+        Route::post('categories', [CategoriesController::class, 'store']);
+        Route::put('categories/{id}', [CategoriesController::class, 'update']);
+        Route::delete('categories/{id}', [CategoriesController::class, 'destroy']);
+    });
+    
 });
